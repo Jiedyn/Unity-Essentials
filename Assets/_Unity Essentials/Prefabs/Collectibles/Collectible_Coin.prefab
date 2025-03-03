@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4939168662721627333}
   - component: {fileID: 2056648017252441015}
+  - component: {fileID: 2369437610856796869}
   m_Layer: 0
   m_Name: Collectible_Coin
   m_TagString: Untagged
@@ -54,6 +55,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.08051109, y: 0.08098607, z: 0.015890121}
   m_Center: {x: 0.0010278225, y: -0.0010035262, z: -0.008246958}
+--- !u!114 &2369437610856796869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136143963203655571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfe70dd3620eed145bd33d8656c4afc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 0
+  onCollectEffect: {fileID: 9163842254569548763, guid: a64312fe794124baa923bcca22ea4631,
+    type: 3}
 --- !u!1 &9092340987876840184
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,6 +128,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

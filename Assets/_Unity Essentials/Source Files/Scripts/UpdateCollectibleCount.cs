@@ -4,7 +4,7 @@ using System; // Required for Type handling
 
 public class UpdateCollectibleCount : MonoBehaviour
 {
-    private TextMeshProUGUI collectibleText; // Reference to the TextMeshProUGUI component
+    public TextMeshProUGUI collectibleText; // Reference to the TextMeshProUGUI component
 
     void Start()
     {

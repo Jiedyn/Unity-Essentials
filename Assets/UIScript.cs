@@ -3,13 +3,15 @@ using TMPro;
 using System;
 
 public class UpdateCollectableCount : MonoBehaviour
-    { private TextMeshProUGUI collectibleText;
+{ 
+    private TextMeshProUGUI collectibleText;
 
     void Start()
     {
-        collectibleText = GetComponent<TextMeshProUGUI>();
+        //collectibleText = GetComponent<TextMeshProUGUI>();
         if (collectibleText == null)
         {
+
             Debug.LogError("UpdateCollectibleCount script requires a TextMeshProUGUI component on the same GameObject.");
             return;
         }
@@ -25,18 +27,20 @@ public class UpdateCollectableCount : MonoBehaviour
         int totalCollectibles = 0;
 
         // Check and count objects of type Collectible
-        Type collectibleType = Type.GetType("Collectible");
+        Type collectibleType = Type.GetType("Collectable");
         if (collectibleType != null)
         {
-            totalCollectibles += UnityEngine.Object.FindObjectsByType(collectibleType, FindObjectsSortMode.None).Length;
+            totalCollectibles += FindObjectsByType(collectibleType, FindObjectsSortMode.None).Length;
         }
 
+        /*
         // Optionally, check and count objects of type Collectible2D as well if needed
         Type collectible2DType = Type.GetType("Collectible2D");
         if (collectible2DType != null)
         {
             totalCollectibles += UnityEngine.Object.FindObjectsByType(collectible2DType, FindObjectsSortMode.None).Length;
         }
+        */
 
         // Update the collectible count display
         collectibleText.text = $"Collectibles remaining: {totalCollectibles}";
